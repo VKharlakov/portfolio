@@ -1,3 +1,4 @@
+import HorizontalScrollComponents from "@/components/HorizontalScrollComponents/HorizontalScrollComponents";
 import Intro from "@/components/Intro/Intro";
 import Navbar from "@/components/Navbar/Navbar";
 import Skills from "@/components/Skills/Skills";
@@ -10,8 +11,7 @@ export default function Home() {
         <title>VKharlakov | Frontend Developer</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Intro />
-      <Skills />
+      <HorizontalScrollComponents />
     </>
   );
 }

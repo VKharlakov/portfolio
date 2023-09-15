@@ -1,0 +1,11 @@
+.horizontal-scroll-components {
+  min-height: 300vh;
+  position: relative;
+}
+
+.horizontal-scroll-components__container {
+  display: flex;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+}

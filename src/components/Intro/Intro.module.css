@@ -3,6 +3,8 @@
   padding: 60px;
   box-sizing: border-box;
   color: var(--text-color);
+  min-width: 50%;
+  /* flex-shrink: 0; */
 }
 
 .intro__container {

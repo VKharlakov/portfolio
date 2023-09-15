@@ -1,17 +1,19 @@
 import styles from "./Intro.module.css";
 import { useRef } from "react";
-import { useScroll, useTransform } from "framer-motion";
+import { motion, MotionValue } from "framer-motion";
 
-function Intro() {
-  const targetRef = useRef<HTMLDivElement | null>(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-  });
+interface IntroProps {
+  scrollData: {
+    opacity: MotionValue<string>;
+  };
+}
 
-  const opacity = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
-
+function Intro({ scrollData }: IntroProps) {
   return (
-    <section className={styles.intro} ref={targetRef}>
+    <motion.section
+      className={styles.intro}
+      style={{ opacity: scrollData.opacity }}
+    >
       <div className={styles.intro__container}>
         <div className={styles.intro__info}>
           <h1 className={styles.intro__greeting}>
@@ -28,7 +30,7 @@ function Intro() {
         </div>
         <p className={styles.intro__scroll}>Scroll down to see more</p>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

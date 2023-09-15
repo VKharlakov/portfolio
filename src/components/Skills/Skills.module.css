@@ -1,5 +1,6 @@
 .skills {
   height: 100vh;
+  min-width: 100%;
   padding: 60px;
   display: flex;
   align-items: center;
