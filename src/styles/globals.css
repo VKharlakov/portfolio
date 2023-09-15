@@ -1,9 +1,18 @@
 :root {
+  /* Color palette */
   --main-color: #202020;
   --text-color: #ffffff;
   --light-color: #c1c1c1;
   --secondary-color: #353442;
-  --highlight-color: #00a97f;
+  --highlight-color: #007a5c;
+  --highlight-light-color: #008f6b;
+  --highlight-dark-color: #00664d;
+
+  /* Font sizes */
+  --h1-size: 48px;
+  --h2-size: 36px;
+  --h3-size: 24px;
+  --p-size: 14px;
 
   background-color: var(--main-color);
 }
