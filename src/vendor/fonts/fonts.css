@@ -1,0 +1,52 @@
+/* M Plus Code Latin */
+
+@font-face {
+  font-family: "M Plus Code Latin";
+  src: url("./MPLUSCodeLatin/MPLUSCodeLatin-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "M Plus Code Latin";
+  src: url("./MPLUSCodeLatin/MPLUSCodeLatin-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "M Plus Code Latin";
+  src: url("./MPLUSCodeLatin/MPLUSCodeLatin-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "M Plus Code Latin";
+  src: url("./MPLUSCodeLatin/MPLUSCodeLatin-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Inter */
+
+@font-face {
+  font-family: "Inter";
+  src: url("./Inter/Inter-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./Inter/Inter-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./Inter/Inter-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
