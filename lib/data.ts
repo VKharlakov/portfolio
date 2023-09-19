@@ -97,3 +97,42 @@ export const skills = [
     size: "small",
   },
 ] as const;
+
+export const projects = [
+  {
+    name: "GuildRM",
+    stack: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Node.js",
+      "Express.js",
+      "REST API",
+      "Nginx",
+      "MongoDB",
+    ],
+    description: `A small web application made for a World of Warcraft gaming community. It allows to track guild's groups composition for easier roster monitoring.`,
+    icon: guildrmImg,
+    link: "https://guildrm.com",
+    repoLink: "https://github.com/VKharlakov/guild-roster-manager",
+  },
+  {
+    name: "GuildRM",
+    stack: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Node.js",
+      "Express.js",
+      "REST API",
+      "Nginx",
+      "MongoDB",
+    ],
+    description: `A small web application made for a World of Warcraft gaming community. It allows to track guild's groups composition for easier roster monitoring.`,
+    icon: guildrmImg,
+    link: "https://guildrm.com",
+    repoLink: "https://github.com/VKharlakov/guild-roster-manager",
+  },
+] as const;
