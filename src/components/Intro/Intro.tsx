@@ -1,10 +1,11 @@
 import styles from "./Intro.module.css";
-import { useRef } from "react";
 import { motion, MotionValue } from "framer-motion";
+import photo from "../../../public/photo.jpg";
 
 interface IntroProps {
   scrollData: {
     opacity: MotionValue<string>;
+    x: MotionValue<string>;
   };
 }
 
@@ -12,7 +13,7 @@ function Intro({ scrollData }: IntroProps) {
   return (
     <motion.section
       className={styles.intro}
-      style={{ opacity: scrollData.opacity }}
+      style={{ opacity: scrollData.opacity, x: scrollData.x }}
     >
       <div className={styles.intro__container}>
         <div className={styles.intro__info}>
@@ -27,6 +28,10 @@ function Intro({ scrollData }: IntroProps) {
             acquired skills and knowledge. My focus is React, mainly.
           </p>
           <button className={styles.intro__button}>Download CV</button>
+        </div>
+        <div className={styles["intro__photo-container"]}>
+          <img className={styles.intro__photo} src={photo.src} />
+          <span className={styles["intro__photo-background"]} />
         </div>
         <p className={styles.intro__scroll}>Scroll down to see more</p>
       </div>

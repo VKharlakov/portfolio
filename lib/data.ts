@@ -1,6 +1,6 @@
 import guildrmImg from "../public/guildrm.png";
 
-export const links = [
+export const navLinks = [
   {
     name: "Home",
     hash: "#home",
@@ -10,8 +10,8 @@ export const links = [
     hash: "#skills",
   },
   {
-    name: "Education",
-    hash: "#education",
+    name: "Education & Experience",
+    hash: "#education-and-experience",
   },
   {
     name: "Projects",
@@ -25,7 +25,7 @@ export const links = [
 
 export const skills = [
   {
-    name: "TypeScript",
+    name: "JavaScript",
     size: "wide",
   },
   {
@@ -61,11 +61,11 @@ export const skills = [
     size: "small",
   },
   {
-    name: "Adaptive",
+    name: "TypeScript",
     size: "medium",
   },
   {
-    name: "JavaScript",
+    name: "Adaptive",
     size: "small",
   },
   {
@@ -93,7 +93,7 @@ export const skills = [
     size: "small",
   },
   {
-    name: "Frame Motion",
+    name: "Framer Motion",
     size: "small",
   },
 ] as const;
@@ -134,5 +134,24 @@ export const projects = [
     icon: guildrmImg,
     link: "https://guildrm.com",
     repoLink: "https://github.com/VKharlakov/guild-roster-manager",
+  },
+] as const;
+
+export const links = [
+  {
+    name: "hh",
+    link: "https://hh.ru/resume/dc92d752ff0c3ba55a0039ed1f4b4569513469",
+  },
+  {
+    name: "linkedin",
+    link: "https://www.linkedin.com/in/vkharlakov/",
+  },
+  {
+    name: "telegram",
+    link: "https://t.me/vit_kharl",
+  },
+  {
+    name: "whatsapp",
+    link: "https://wa.me/79959051321",
   },
 ] as const;

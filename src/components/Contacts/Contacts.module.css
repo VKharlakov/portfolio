@@ -38,10 +38,18 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background-color: var(--highlight-color);
+  background-color: var(--secondary-color);
   background-size: 70%;
   background-repeat: no-repeat;
   background-position: center;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.contacts__contact:hover {
+  scale: 1.2;
+  cursor: pointer;
+  background-color: var(--secondary-hover-color);
 }
 
 .contacts__contact_type_main {
@@ -74,6 +82,8 @@
 }
 
 .contacts__link {
+  height: 100%;
+  width: 100%;
 }
 
 .contacts__button {

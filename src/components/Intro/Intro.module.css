@@ -1,30 +1,61 @@
 .intro {
+  width: 100%;
   height: 100vh;
   padding: 60px;
   box-sizing: border-box;
   color: var(--text-color);
-  min-width: 50%;
-  /* flex-shrink: 0; */
+  flex-shrink: 0;
 }
 
 .intro__container {
+  margin: auto;
   height: 100%;
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  max-width: 1920px;
+  display: grid;
+  grid-template-areas:
+    "info photo"
+    "scroll ...";
+  align-items: center;
+}
+
+.intro__photo-container {
+  grid-area: photo;
+  position: relative;
+}
+
+.intro__photo {
+  width: 300px;
+  height: 300px;
+  object-position: center 30%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.intro__photo-background {
+  content: "";
+  position: absolute;
+  background-color: var(--secondary-color);
+  height: 120%;
+  width: 120%;
+  top: -10%;
+  left: -10%;
+  z-index: -1;
+  border-radius: 50%;
 }
 
 .intro__info {
+  grid-area: info;
+  max-width: 70%;
 }
 
 .intro__greeting {
   font-size: var(--h1-size);
-  margin-bottom: 60px;
+  font-family: var(--MPCL);
+  margin-bottom: 30px;
 }
 
 .intro__brief {
-  font-size: calc(var(--p-size) + 2px);
+  font-size: var(--p-size);
 }
 
 .intro__button {
@@ -33,23 +64,42 @@
   padding: 0;
   border: none;
   outline: none;
-  background-color: #ba2d0b;
-  color: var(--text-color);
+  background-color: var(--secondary-color);
+  color: white;
   border-radius: 12px;
   width: 160px;
   height: 40px;
-  font-size: calc(var(--p-size) + 2px);
+  font-size: var(--p-size);
   transition: 0.3s ease;
+  animation: blick-slide infinite 4s linear;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+    -45deg,
+    transparent 0%,
+    transparent 49%,
+    #ffffff 50%,
+    transparent 70%
+  );
+}
+
+@keyframes blick-slide {
+  from {
+    background-position-x: calc(-160px * 6);
+  }
+  to {
+    background-position-x: calc(100% + 160px * 6);
+  }
 }
 
 .intro__button:hover {
   cursor: pointer;
-  background-color: #e7390d;
-  color: var(--main-color);
-  font-weight: bold;
+  scale: 1.2;
+  background-color: var(--secondary-hover-color);
 }
 
 .intro__scroll {
-  font-size: calc(var(--p-size) + 2px);
-  color: var(--light-color);
+  align-self: flex-end;
+  font-family: var(--MPCL);
+  font-size: calc(var(--p-size) - 2px);
+  color: var(--text-color);
 }

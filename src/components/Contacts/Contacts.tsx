@@ -1,3 +1,4 @@
+import { links } from "../../../lib/data";
 import styles from "./Contacts.module.css";
 
 function Contacts() {
@@ -8,28 +9,21 @@ function Contacts() {
         <li
           className={`${styles.contacts__contact} ${styles["contacts__contact_type_main"]}`}
         >
-          <button className={styles.contacts__button}></button>
+          <button className={styles.contacts__button} />
         </li>
-        <li
-          className={`${styles.contacts__contact} ${styles["contacts__contact_type_small"]}`}
-        >
-          <a className={styles.contacts__link}></a>
-        </li>
-        <li
-          className={`${styles.contacts__contact} ${styles["contacts__contact_type_small"]}`}
-        >
-          <a className={styles.contacts__link}></a>
-        </li>
-        <li
-          className={`${styles.contacts__contact} ${styles["contacts__contact_type_small"]}`}
-        >
-          <a className={styles.contacts__link}></a>
-        </li>
-        <li
-          className={`${styles.contacts__contact} ${styles["contacts__contact_type_small"]}`}
-        >
-          <a className={styles.contacts__link}></a>
-        </li>
+        {links.map((link, index) => (
+          <li
+            className={`${styles.contacts__contact} ${styles["contacts__contact_type_small"]}`}
+            key={index}
+          >
+            <a
+              className={styles.contacts__link}
+              href={link.link}
+              target="_blank"
+              rel="noreferrer"
+            />
+          </li>
+        ))}
       </ul>
     </section>
   );

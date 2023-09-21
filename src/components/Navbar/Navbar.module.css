@@ -1,10 +1,16 @@
 .navbar {
-  background-color: var(--secondary-color);
-  width: 450px;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(2px);
+  width: max-content;
   height: 40px;
-  padding: 0 40px;
   overflow: hidden;
   border-radius: 24px;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+  box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.3);
 }
 
 .navbar__list {
@@ -22,18 +28,25 @@
   padding: 0 15px;
   height: 100%;
   border-radius: 24px;
-  display: flex;
-  align-items: center;
   transition: 0.3s ease;
 }
 
 .navbar__link {
+  display: flex;
+  height: 100%;
+  align-items: center;
   color: var(--text-color);
   margin: 0;
   padding: 0;
   text-decoration: none;
+  font-size: var(--p-size);
+  transition: 0.3s ease;
 }
 
 .navbar__item:has(.navbar__link:hover) {
-  background-color: var(--highlight-light-color);
+  background-color: var(--accent-color);
+}
+
+.navbar__link:hover {
+  color: white;
 }

@@ -22,7 +22,7 @@ function Projects() {
             <div className={styles[`projects__link-container`]}>
               <img
                 className={styles.projects__logo}
-                src="#"
+                src={project.icon.src}
                 alt={`${project.name} logo`}
               />
               <a
