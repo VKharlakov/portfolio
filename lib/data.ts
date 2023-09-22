@@ -30,15 +30,6 @@ export const navLinks = [
   },
 ] as const;
 
-export type SectionName = (typeof navLinks)[number]["name"];
-
-export type NavLink = {
-  name: SectionName;
-  hash: string;
-  scrollMethod: string;
-  scrollToMultiplier?: number;
-};
-
 export const skills = [
   {
     name: "JavaScript",
