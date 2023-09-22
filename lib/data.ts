@@ -1,4 +1,5 @@
-import guildrmImg from "../public/guildrm.png";
+import guildrmMockupSVG from "../public/guildrm__mockup-svg.svg";
+import googleBooksMockupSVG from "../public/googleBooks__mockup-svg.svg";
 
 export const navLinks = [
   {
@@ -120,7 +121,7 @@ export const projects = [
       "MongoDB",
     ],
     description: `A small web application made for a World of Warcraft gaming community. It allows to track guild's groups composition for easier roster monitoring.`,
-    icon: guildrmImg,
+    icon: guildrmMockupSVG,
     link: "https://guildrm.com",
     repoLink: "https://github.com/VKharlakov/guild-roster-manager",
   },
@@ -128,7 +129,7 @@ export const projects = [
     name: "Google Books API Catalog",
     stack: ["Frontend", "TypeScript", "React", "Redux", "Docker", "BEM"],
     description: `This project is an interactive book catalog based on data obtained using the Google Books API.`,
-    icon: null,
+    icon: googleBooksMockupSVG,
     link: undefined,
     repoLink: "https://github.com/VKharlakov/future-junior",
   },
