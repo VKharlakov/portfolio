@@ -3,7 +3,6 @@
   backdrop-filter: blur(2px);
   width: max-content;
   height: 40px;
-  overflow: hidden;
   border-radius: 24px;
   position: fixed;
   top: 20px;
@@ -19,16 +18,16 @@
   list-style: none;
   display: flex;
   justify-content: space-between;
-  gap: 10px;
+  gap: 40px;
   height: 100%;
 }
 
 .navbar__item {
   margin: 0;
-  padding: 0 15px;
+  padding: 0;
   height: 100%;
-  border-radius: 24px;
   transition: 0.3s ease;
+  position: relative;
 }
 
 .navbar__link {
@@ -37,16 +36,33 @@
   align-items: center;
   color: var(--text-color);
   margin: 0;
-  padding: 0;
+  padding: 0 15px;
   text-decoration: none;
   font-size: var(--p-size);
-  transition: 0.3s ease;
+  transition: 0.2s ease;
+  border-radius: 24px;
 }
 
-.navbar__item:has(.navbar__link:hover) {
+.navbar__link_active {
+  color: white;
+}
+
+.navbar__link-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: inline-block;
+  border-radius: 24px;
+  z-index: -1;
   background-color: var(--accent-color);
 }
 
 .navbar__link:hover {
-  color: white;
+  opacity: 0.5;
+}
+
+.navbar__item:has(.navbar__link-background) .navbar__link:hover {
+  opacity: 1;
 }

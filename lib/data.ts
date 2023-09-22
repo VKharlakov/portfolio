@@ -4,24 +4,40 @@ export const navLinks = [
   {
     name: "Home",
     hash: "#home",
+    scrollMethod: "manual",
+    scrollToMultiplier: 0,
   },
   {
     name: "Skills",
     hash: "#skills",
+    scrollMethod: "manual",
+    scrollToMultiplier: 1,
   },
-  {
-    name: "Education & Experience",
-    hash: "#education-and-experience",
-  },
+  // {
+  //   name: "Education & Experience",
+  //   hash: "#education-and-experience",
+  //   scrollMethod: "auto",
+  // },
   {
     name: "Projects",
     hash: "#projects",
+    scrollMethod: "auto",
   },
   {
     name: "Contacts",
     hash: "#contacts",
+    scrollMethod: "auto",
   },
 ] as const;
+
+export type SectionName = (typeof navLinks)[number]["name"];
+
+export type NavLink = {
+  name: SectionName;
+  hash: string;
+  scrollMethod: string;
+  scrollToMultiplier?: number;
+};
 
 export const skills = [
   {
@@ -102,10 +118,10 @@ export const projects = [
   {
     name: "GuildRM",
     stack: [
-      "HTML",
-      "CSS",
+      "Frontend & Backend",
       "JavaScript",
       "React",
+      "BEM",
       "Node.js",
       "Express.js",
       "REST API",
@@ -118,22 +134,12 @@ export const projects = [
     repoLink: "https://github.com/VKharlakov/guild-roster-manager",
   },
   {
-    name: "GuildRM",
-    stack: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "React",
-      "Node.js",
-      "Express.js",
-      "REST API",
-      "Nginx",
-      "MongoDB",
-    ],
-    description: `A small web application made for a World of Warcraft gaming community. It allows to track guild's groups composition for easier roster monitoring.`,
-    icon: guildrmImg,
-    link: "https://guildrm.com",
-    repoLink: "https://github.com/VKharlakov/guild-roster-manager",
+    name: "Google Books API Catalog",
+    stack: ["Frontend", "TypeScript", "React", "Redux", "Docker", "BEM"],
+    description: `This project is an interactive book catalog based on data obtained using the Google Books API.`,
+    icon: null,
+    link: undefined,
+    repoLink: "https://github.com/VKharlakov/future-junior",
   },
 ] as const;
 
