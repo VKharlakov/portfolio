@@ -25,111 +25,11 @@
   grid-auto-rows: 400px;
 }
 
-.projects__project {
+.projects__item {
   width: 100%;
   max-width: 750px;
   padding: 20px;
   border-radius: 12px;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
-  display: grid;
-  grid-template-columns: 65% 35%;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-areas:
-    "name link-container"
-    "description link-container"
-    "stack link-container";
-}
-
-.projects__name {
-  grid-area: name;
-  font-size: var(--h3-size);
-}
-
-.projects__description {
-  grid-area: description;
-  font-size: var(--p-size);
-}
-
-.projects__stack {
-  grid-area: stack;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-content: center;
-}
-
-.projects__stack-item {
-  padding: 4px 8px;
-  border-radius: 12px;
-  font-size: var(--p-size);
-  color: var(--text-color);
-  font-family: var(--MPCL);
-  height: max-content;
-  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5);
-}
-
-.projects__link-container {
-  grid-area: link-container;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr max-content;
-  grid-template-areas:
-    "logo logo"
-    "link-web link-repo";
-  justify-items: center;
-  align-self: center;
-  height: max-content;
-  row-gap: 10px;
-  column-gap: 20px;
-}
-
-.projects__logo {
-  grid-area: logo;
-  width: 200px;
-  height: 200px;
-  object-position: center;
-  object-fit: cover;
-}
-
-.projects__link {
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 24px;
-  height: 24px;
-  display: inline-block;
-  position: relative;
-}
-
-.projects__link::after {
-  content: "";
-  position: absolute;
-  width: 120%;
-  height: 120%;
-  top: -10%;
-  left: -10%;
-  background-color: var(--secondary-color);
-  z-index: -1;
-  border-radius: 50%;
-}
-
-.projects__link:first-of-type {
-  margin-left: auto;
-}
-.projects__link:last-of-type {
-  margin-right: auto;
-}
-
-.projects__link_type_web {
-  grid-area: link-web;
-  background-image: url("../../../public/web-icon.svg");
-}
-.projects__link_type_repo {
-  grid-area: link-repo;
-  background-image: url("../../../public/github-icon.svg");
 }
