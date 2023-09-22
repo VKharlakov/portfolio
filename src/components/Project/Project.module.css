@@ -94,6 +94,26 @@
 .project__link_type_web {
   background-color: var(--accent-color);
   background-image: url("../../../public/web-icon.svg");
+  overflow: hidden;
+  position: relative;
+}
+
+.project__link_type_web::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: blick-slide infinite 4s linear;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+    -45deg,
+    transparent 0%,
+    transparent 49%,
+    #ffffff 50%,
+    transparent 70%
+  );
 }
 
 .project__link_type_web:hover {
@@ -102,4 +122,13 @@
 
 .project__link_type_repo {
   background-image: url("../../../public/github-icon.svg");
+}
+
+@keyframes blick-slide {
+  from {
+    background-position-x: calc(-72px * 6);
+  }
+  to {
+    background-position-x: calc(100% + 72px * 6);
+  }
 }
