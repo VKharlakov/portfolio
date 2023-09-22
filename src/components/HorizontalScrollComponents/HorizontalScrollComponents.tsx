@@ -1,5 +1,4 @@
 import styles from "./HorizontalScrollComponents.module.css";
-
 import Intro from "../Intro/Intro";
 import Skills from "../Skills/Skills";
 

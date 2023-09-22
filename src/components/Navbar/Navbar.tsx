@@ -1,17 +1,19 @@
 import styles from "./Navbar.module.css";
-import { NavLink, navLinks } from "../../../lib/data";
 import Link from "next/link";
+
 import { motion } from "framer-motion";
-import { useState, useEffect, useContext } from "react";
-import { useCurrentSectionContext } from "@/contexts/CurrentSectionContext";
-import { useInView } from "react-intersection-observer";
+import { navLinks } from "../../../lib/data";
+import type { NavLink } from "../../../lib/types";
+import { useCurrentSectionContext } from "../../../lib/hooks";
 
 function Navbar() {
-  const { currentSection, setCurrentSection } = useCurrentSectionContext();
+  const { currentSection, setCurrentSection, setWhenLastClick } =
+    useCurrentSectionContext();
 
   function scrollToSection(link: NavLink) {
     const element = document.getElementById(`${link.hash.slice(1)}`);
     setCurrentSection(link.name);
+    setWhenLastClick(Date.now());
     if (!element) {
       return;
     }

@@ -1,10 +1,8 @@
 import styles from "./Skills.module.css";
 
-import { useEffect } from "react";
 import { skills } from "../../../lib/data";
 import { motion, MotionValue } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useCurrentSectionContext } from "@/contexts/CurrentSectionContext";
+import { useScrollSection } from "../../../lib/hooks";
 interface SkillsProps {
   scrollData: {
     x: MotionValue<string>;
@@ -27,15 +25,7 @@ const fadeInAnimationVariants = {
 };
 
 function Skills({ scrollData }: SkillsProps) {
-  const { ref, inView } = useInView({ threshold: 0.6 });
-  const { setCurrentSection } = useCurrentSectionContext();
-
-  useEffect(() => {
-    if (inView) {
-      console.log("Skills section is in view");
-      setCurrentSection("Skills");
-    }
-  }, [inView]);
+  const { ref } = useScrollSection("Skills");
 
   return (
     <motion.section

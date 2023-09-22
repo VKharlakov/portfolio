@@ -1,12 +1,14 @@
-import { SectionName } from "../../lib/data";
-import { createContext, useState, useContext } from "react";
+import { createContext, useState } from "react";
+import type { SectionName } from "../../lib/types";
 
 interface CurrentSectionContextProviderProps {
   children: React.ReactNode;
 }
 
 interface CurrentSectionContextType {
+  whenLastClick: number;
   currentSection: SectionName;
+  setWhenLastClick: React.Dispatch<React.SetStateAction<number>>;
   setCurrentSection: React.Dispatch<React.SetStateAction<SectionName>>;
 }
 
@@ -17,27 +19,18 @@ export default function CurrentSectionContextProvider({
   children,
 }: CurrentSectionContextProviderProps) {
   const [currentSection, setCurrentSection] = useState<SectionName>("Home");
+  const [whenLastClick, setWhenLastClick] = useState(0);
 
   return (
     <CurrentSectionContext.Provider
       value={{
+        whenLastClick: whenLastClick,
         currentSection: currentSection,
+        setWhenLastClick: setWhenLastClick,
         setCurrentSection: setCurrentSection,
       }}
     >
       {children}
     </CurrentSectionContext.Provider>
   );
-}
-
-export function useCurrentSectionContext() {
-  const context = useContext(CurrentSectionContext);
-
-  if (context === null) {
-    throw new Error(
-      "useCurrentSectionContext must be used inside CurrentSectionContextProvider component"
-    );
-  }
-
-  return context;
 }

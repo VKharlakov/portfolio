@@ -1,20 +1,10 @@
 import styles from "./Contacts.module.css";
 
-import { useEffect } from "react";
 import { links } from "../../../lib/data";
-import { useInView } from "react-intersection-observer";
-import { useCurrentSectionContext } from "@/contexts/CurrentSectionContext";
+import { useScrollSection } from "../../../lib/hooks";
 
 function Contacts() {
-  const { ref, inView } = useInView({ threshold: 0.6 });
-  const { setCurrentSection } = useCurrentSectionContext();
-
-  useEffect(() => {
-    if (inView) {
-      console.log("Contacts section is in view");
-      setCurrentSection("Contacts");
-    }
-  }, [inView]);
+  const { ref } = useScrollSection("Contacts");
 
   return (
     <section className={styles.contacts} id="contacts" ref={ref}>

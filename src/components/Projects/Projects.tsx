@@ -1,20 +1,10 @@
 import styles from "./Projects.module.css";
 
-import { useEffect } from "react";
 import { projects } from "../../../lib/data";
-import { useInView } from "react-intersection-observer";
-import { useCurrentSectionContext } from "@/contexts/CurrentSectionContext";
+import { useScrollSection } from "../../../lib/hooks";
 
 function Projects() {
-  const { ref, inView } = useInView({ threshold: 0.2 });
-  const { setCurrentSection } = useCurrentSectionContext();
-
-  useEffect(() => {
-    if (inView) {
-      console.log("Projects section is in view");
-      setCurrentSection("Projects");
-    }
-  }, [inView]);
+  const { ref } = useScrollSection("Projects", 0.2);
 
   return (
     <section className={styles.projects} id="projects" ref={ref}>
