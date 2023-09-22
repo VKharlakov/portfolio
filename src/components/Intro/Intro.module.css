@@ -74,15 +74,6 @@
   );
 }
 
-@keyframes blick-slide {
-  from {
-    background-position-x: calc(-160px * 6);
-  }
-  to {
-    background-position-x: calc(100% + 160px * 6);
-  }
-}
-
 .intro__button:hover {
   cursor: pointer;
   scale: 1.2;
@@ -95,4 +86,13 @@
   font-family: var(--MPCL);
   font-size: calc(var(--p-size) - 2px);
   color: var(--text-color);
+}
+
+@keyframes blick-slide {
+  from {
+    background-position-x: calc(-160px * 6);
+  }
+  to {
+    background-position-x: calc(100% + 160px * 6);
+  }
 }

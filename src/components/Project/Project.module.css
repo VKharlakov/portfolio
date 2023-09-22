@@ -6,37 +6,44 @@
 .project {
   width: 100%;
   height: 100%;
-  padding: 20px;
   border-radius: 12px;
   display: grid;
-  grid-template-columns: 65% 35%;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 60% 40%;
+  grid-template-rows: max-content 1fr 1fr;
   grid-template-areas:
     "name link-container"
-    "description link-container"
-    "stack link-container";
+    "description logo"
+    "stack logo";
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  column-gap: 20px;
+  border: 1px solid rgba(193, 193, 193, 0.5);
+  box-sizing: border-box;
 }
 
 .project__name {
   grid-area: name;
   font-size: var(--h3-size);
+  margin: 20px 0 0 20px;
 }
 
 .project__description {
   grid-area: description;
   font-size: var(--p-size);
+  align-self: center;
+  margin: 0 0 0 20px;
 }
 
 .project__stack {
   grid-area: stack;
-  margin: 0;
+  margin: 0 0 20px 20px;
   padding: 0;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   align-content: center;
+  align-self: flex-end;
 }
 
 .project__stack-item {
@@ -51,24 +58,16 @@
 
 .project__link-container {
   grid-area: link-container;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr max-content;
-  grid-template-areas:
-    "logo logo"
-    "link-web link-repo";
-  justify-items: center;
-  align-self: center;
+  display: flex;
   height: max-content;
-  row-gap: 10px;
-  column-gap: 20px;
+  align-self: flex-end;
+  justify-content: center;
+  gap: 20px;
 }
 
 .project__logo {
   grid-area: logo;
-  width: 200px;
-  height: 200px;
-  object-position: center;
+  width: 700px;
   object-fit: cover;
 }
 
@@ -76,36 +75,31 @@
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  width: 24px;
+  width: 72px;
   height: 24px;
   display: inline-block;
-  position: relative;
-}
-
-.project__link::after {
-  content: "";
-  position: absolute;
-  width: 120%;
-  height: 120%;
-  top: -10%;
-  left: -10%;
   background-color: var(--secondary-color);
-  z-index: -1;
-  border-radius: 50%;
+  background-size: 25%;
+  margin-bottom: 10px;
+  border-radius: 24px;
+  transition: 0.3s ease;
 }
 
-.project__link:first-of-type {
-  margin-left: auto;
-}
-.project__link:last-of-type {
-  margin-right: auto;
+.project__link:hover {
+  cursor: pointer;
+  scale: 1.2;
+  background-color: var(--secondary-hover-color);
 }
 
 .project__link_type_web {
-  grid-area: link-web;
+  background-color: var(--accent-color);
   background-image: url("../../../public/web-icon.svg");
 }
+
+.project__link_type_web:hover {
+  background-color: var(--accent-hover-color);
+}
+
 .project__link_type_repo {
-  grid-area: link-repo;
   background-image: url("../../../public/github-icon.svg");
 }

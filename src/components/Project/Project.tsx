@@ -33,24 +33,28 @@ function Project({ projectData }: ProjectProps) {
             </li>
           ))}
         </ul>
+        <img
+          className={styles.project__logo}
+          src={projectData.icon?.src}
+          alt={`${projectData.name} logo`}
+        />
         <div className={styles[`project__link-container`]}>
-          <img
-            className={styles.project__logo}
-            src={projectData.icon?.src}
-            alt={`${projectData.name} logo`}
-          />
-          <a
-            className={`${styles.project__link} ${styles.project__link_type_web}`}
-            href={projectData.link}
-            target="_blank"
-            rel="noreferrer"
-          />
-          <a
-            className={`${styles.project__link} ${styles.project__link_type_repo}`}
-            href={projectData.repoLink}
-            target="_blank"
-            rel="noreferrer"
-          />
+          {projectData.link && (
+            <a
+              className={`${styles.project__link} ${styles.project__link_type_web}`}
+              href={projectData.link}
+              target="_blank"
+              rel="noreferrer"
+            />
+          )}
+          {projectData.repoLink && (
+            <a
+              className={`${styles.project__link} ${styles.project__link_type_repo}`}
+              href={projectData.repoLink}
+              target="_blank"
+              rel="noreferrer"
+            />
+          )}
         </div>
       </section>
     </motion.div>
