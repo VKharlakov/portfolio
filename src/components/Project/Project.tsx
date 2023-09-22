@@ -1,7 +1,7 @@
 import { projects } from "../../../lib/data";
 import styles from "./Project.module.css";
 import { useRef } from "react";
-import { motion, useScroll } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 interface ProjectProps {
   projectData: (typeof projects)[number];
 }
@@ -10,16 +10,17 @@ function Project({ projectData }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1.4", "1.25 1"],
+    offset: ["0 1", "1.33 1"],
   });
-
+  const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
   return (
     <motion.div
       className={styles["project-wrapper"]}
       ref={ref}
       style={{
-        scale: scrollYProgress,
-        opacity: scrollYProgress,
+        scale: scale,
+        opacity: opacity,
       }}
     >
       <section className={styles.project}>
