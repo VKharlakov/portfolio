@@ -1,9 +1,23 @@
-import { projects } from "../../../lib/data";
 import styles from "./Projects.module.css";
 
+import { useEffect } from "react";
+import { projects } from "../../../lib/data";
+import { useInView } from "react-intersection-observer";
+import { useCurrentSectionContext } from "@/contexts/CurrentSectionContext";
+
 function Projects() {
+  const { ref, inView } = useInView({ threshold: 0.2 });
+  const { setCurrentSection } = useCurrentSectionContext();
+
+  useEffect(() => {
+    if (inView) {
+      console.log("Projects section is in view");
+      setCurrentSection("Projects");
+    }
+  }, [inView]);
+
   return (
-    <section className={styles.projects}>
+    <section className={styles.projects} id="projects" ref={ref}>
       <h2 className={styles.projects__title}>Projects</h2>
       <ul className={styles.projects__list}>
         {projects.map((project, index) => (
@@ -22,7 +36,7 @@ function Projects() {
             <div className={styles[`projects__link-container`]}>
               <img
                 className={styles.projects__logo}
-                src={project.icon.src}
+                src={project.icon?.src}
                 alt={`${project.name} logo`}
               />
               <a

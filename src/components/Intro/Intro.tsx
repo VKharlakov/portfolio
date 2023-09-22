@@ -1,19 +1,36 @@
 import styles from "./Intro.module.css";
-import { motion, MotionValue } from "framer-motion";
+
 import photo from "../../../public/photo.jpg";
+
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import { motion, MotionValue } from "framer-motion";
+import { useCurrentSectionContext } from "@/contexts/CurrentSectionContext";
 
 interface IntroProps {
   scrollData: {
-    opacity: MotionValue<string>;
     x: MotionValue<string>;
   };
 }
 
 function Intro({ scrollData }: IntroProps) {
+  const { ref, inView } = useInView({ threshold: 0.6 });
+  const { setCurrentSection } = useCurrentSectionContext();
+
+  useEffect(() => {
+    if (inView) {
+      console.log("Home section is in view");
+
+      setCurrentSection("Home");
+    }
+  }, [inView]);
+
   return (
     <motion.section
+      id="home"
       className={styles.intro}
-      style={{ opacity: scrollData.opacity, x: scrollData.x }}
+      style={{ x: scrollData.x }}
+      ref={ref}
     >
       <div className={styles.intro__container}>
         <div className={styles.intro__info}>
@@ -29,10 +46,7 @@ function Intro({ scrollData }: IntroProps) {
           </p>
           <button className={styles.intro__button}>Download CV</button>
         </div>
-        <div className={styles["intro__photo-container"]}>
-          <img className={styles.intro__photo} src={photo.src} />
-          <span className={styles["intro__photo-background"]} />
-        </div>
+        <img className={styles.intro__photo} src={photo.src} />
         <p className={styles.intro__scroll}>Scroll down to see more</p>
       </div>
     </motion.section>

@@ -8,6 +8,7 @@
   gap: 60px;
   color: var(--text-color);
   max-width: 1440px;
+  scroll-margin-top: 40px;
 }
 
 .projects__title {

@@ -3,23 +3,25 @@
 
 :root {
   /* Font names */
-  --MPCL: "M Plus Code Latin";
   --Inter: "Inter";
+  --MPCL: "M Plus Code Latin";
 
   /* Color palette */
   --main-color: #fff;
   --text-color: #02091b;
   --accent-color: #87b800;
-  --accent-hover-color: #ff5747;
+  --accent-hover-color: #b4f500;
   --secondary-color: #5158bb;
   --secondary-hover-color: #6c72c6;
 
   /* Font sizes */
-  --h1-size: 48.83px;
-  --h2-size: 39.06px;
-  --h3-size: 31.25px;
-  --p-size: 16px;
+  --h1-size: 3.052rem;
+  --h2-size: 2.441rem;
+  --h3-size: 1.953rem;
+  --p-size: 1rem;
 
+  font-size: 16px;
+  scroll-behavior: smooth;
   font-family: var(--Inter);
   background-color: var(--main-color);
 }
