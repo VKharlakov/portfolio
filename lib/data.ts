@@ -14,11 +14,6 @@ export const navLinks = [
     scrollMethod: "manual",
     scrollToMultiplier: 1,
   },
-  // {
-  //   name: "Education & Experience",
-  //   hash: "#education-and-experience",
-  //   scrollMethod: "auto",
-  // },
   {
     name: "Projects",
     hash: "#projects",
@@ -124,6 +119,14 @@ export const projects = [
     icon: guildrmMockupSVG,
     link: "https://guildrm.com",
     repoLink: "https://github.com/VKharlakov/guild-roster-manager",
+  },
+  {
+    name: "Portfolio",
+    stack: ["Frontend", "TypeScript", "React", "Framer", "BEM", "Next.js"],
+    description: `A personal web page showcasing my skills and finished projects`,
+    icon: null,
+    link: undefined,
+    repoLink: "https://github.com/VKharlakov/porftolio",
   },
   {
     name: "Google Books API Catalog",
