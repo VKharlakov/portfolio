@@ -122,7 +122,7 @@ export const projects = [
   },
   {
     name: "Portfolio",
-    stack: ["Frontend", "TypeScript", "React", "Framer", "BEM", "Next.js"],
+    stack: ["Frontend", "TypeScript", "Next.js", "Framer Motion", "BEM"],
     description: `A personal web page showcasing my skills and finished projects`,
     icon: null,
     link: undefined,

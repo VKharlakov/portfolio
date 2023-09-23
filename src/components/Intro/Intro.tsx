@@ -90,12 +90,31 @@ function Intro({ scrollData }: IntroProps) {
             acquired skills and knowledge. My focus is React, mainly.
           </motion.p>
           <motion.div
-            className={styles["intro__button-container"]}
+            className={styles.intro__buttons}
             variants={introAppearAnimationVariants}
             initial="initial"
             animate="animate"
           >
-            <button className={styles.intro__button}>Download CV</button>
+            <motion.div
+              className={styles["intro__button-container"]}
+              variants={introAppearAnimationVariants}
+              initial="initial"
+              animate="animate"
+            >
+              <button
+                className={styles.intro__button}
+              >{`Download CV (ru)`}</button>
+            </motion.div>
+            <motion.div
+              className={styles["intro__button-container"]}
+              variants={introAppearAnimationVariants}
+              initial="initial"
+              animate="animate"
+            >
+              <button
+                className={styles.intro__button}
+              >{`Download CV (eng)`}</button>
+            </motion.div>
           </motion.div>
         </div>
         <AnimatePresence>
