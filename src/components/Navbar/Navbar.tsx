@@ -31,7 +31,12 @@ function Navbar() {
   }
 
   return (
-    <nav className={styles.navbar}>
+    <motion.nav
+      className={styles.navbar}
+      initial={{ top: "-100px", opacity: 0.5 }}
+      animate={{ top: "20px", opacity: 1 }}
+      transition={{ type: "spring" }}
+    >
       <ul className={styles.navbar__list}>
         {navLinks.map((link, index) => (
           <li className={styles.navbar__item} key={index}>
@@ -63,7 +68,7 @@ function Navbar() {
           </li>
         ))}
       </ul>
-    </nav>
+    </motion.nav>
   );
 }
 

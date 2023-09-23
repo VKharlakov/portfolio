@@ -31,7 +31,7 @@ function Skills({ scrollData }: SkillsProps) {
     <motion.section
       id="skills"
       className={styles.skills}
-      style={{ x: scrollData.x, opacity: scrollData.opacity }}
+      style={{ x: scrollData.x }}
       ref={ref}
     >
       <motion.ul className={styles.skills__list}>
@@ -45,7 +45,7 @@ function Skills({ scrollData }: SkillsProps) {
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
-            viewport={{ once: true, amount: 0 }}
+            viewport={{ once: true, amount: 1 }}
             custom={index}
           >
             {skill.name}

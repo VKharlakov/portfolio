@@ -1,14 +1,15 @@
 .projects {
-  padding: 60px 60px 180px;
+  margin: 0 auto;
+  padding: 60px;
   min-height: 100vh;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 60px;
-  color: var(--text-color);
-  max-width: 1440px;
+  color: white;
   scroll-margin-top: 40px;
+  background-color: var(--secondary-color);
 }
 
 .projects__title {
@@ -20,7 +21,7 @@
   padding: 0;
   list-style: none;
   display: grid;
-  gap: 180px;
+  gap: 40px;
   grid-template-columns: 1fr;
   grid-auto-rows: 400px;
 }
@@ -28,6 +29,5 @@
 .projects__item {
   width: 100%;
   max-width: 750px;
-
   box-sizing: border-box;
 }

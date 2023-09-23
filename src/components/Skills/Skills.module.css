@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  background-color: var(--secondary-color);
+  /* background-color: var(--secondary-color); */
   flex-shrink: 0;
 }
 
@@ -29,8 +29,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-color);
-  background-color: white;
+  /* color: var(--text-color); */
+  color: white;
+  background-color: var(--secondary-color);
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
   font-family: var(--MPCL);
   font-weight: 700;

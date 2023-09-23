@@ -9,7 +9,7 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 99;
-  box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
 }
 
 .navbar__list {
@@ -57,6 +57,7 @@
   border-radius: 24px;
   z-index: -1;
   background-color: var(--accent-color);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
 }
 
 .navbar__link:hover {
