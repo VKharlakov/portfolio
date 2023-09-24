@@ -5,11 +5,9 @@
   box-sizing: border-box;
   color: var(--text-color);
   flex-shrink: 0;
-  position: relative;
 }
 
 .intro__container {
-  margin: auto;
   height: 100%;
   max-width: 1920px;
   display: grid;
@@ -25,6 +23,7 @@
   width: 18.75rem; /*300px*/
   height: 18.75rem; /*300px*/
   box-sizing: border-box;
+  margin-top: 4rem;
 }
 
 .intro__photo {
@@ -32,7 +31,6 @@
   height: 100%;
   object-position: center 30%;
   object-fit: cover;
-  margin: 0 auto;
   border-radius: 50%;
   padding: 1.5rem; /*24px*/
   background-color: var(--secondary-color);
@@ -43,6 +41,7 @@
 .intro__info {
   grid-area: info;
   max-width: 70%;
+  margin-top: 4rem;
 }
 
 .intro__greeting {

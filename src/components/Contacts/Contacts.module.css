@@ -1,7 +1,6 @@
 .contacts {
   padding: 3.75rem; /*60px*/
   box-sizing: border-box;
-  color: var(--text-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,6 +9,10 @@
 .contacts__title {
   font-size: var(--h2-size);
   margin-bottom: 3.75rem; /*60px*/
+  color: var(--main-color);
+  padding: 0.75rem 1.5rem; /*12px 24px*/
+  border-radius: 1.5rem; /*24px*/
+  background-color: var(--accent-color);
 }
 
 .contacts__list {
@@ -24,7 +27,7 @@
     " ... hh ... "
     " whatsapp main telegram "
     " ... linkedin ... "; */
-  grid-template-areas: " hh telegram linkedin whatsapp";
+  grid-template-areas: " hh linkedin telegram  whatsapp";
 }
 
 .contacts__contact {
@@ -39,6 +42,7 @@
   background-position: center;
   overflow: hidden;
   transition: 0.3s ease;
+  box-shadow: 0px 0.125rem 0.25rem 0px rgba(0, 0, 0, 0.5); /*0px 2px 2px 0px*/
 }
 
 .contacts__contact:hover {

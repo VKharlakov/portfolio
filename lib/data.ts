@@ -124,7 +124,7 @@ export const projects = [
   {
     name: "Portfolio",
     stack: ["Frontend", "TypeScript", "Next.js", "Framer Motion", "BEM"],
-    description: `A personal web page showcasing my skills and finished projects`,
+    description: `A personal web page showcasing my skills and finished projects.`,
     icon: portfolioMockupSVG,
     link: undefined,
     repoLink: "https://github.com/VKharlakov/porftolio",

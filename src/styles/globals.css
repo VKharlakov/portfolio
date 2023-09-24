@@ -38,6 +38,12 @@
   }
 }
 
+@media all and (max-width: 1600px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
 @media all and (max-width: 1367px) {
   :root {
     font-size: 14px;
