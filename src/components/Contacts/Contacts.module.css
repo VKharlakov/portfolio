@@ -88,3 +88,9 @@
   border: none;
   background-color: transparent;
 }
+
+@media all and (max-width: 450px) {
+  .contacts {
+    padding: 1.75rem; /*60px*/
+  }
+}

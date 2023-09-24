@@ -138,3 +138,44 @@
     background-position-x: calc(100% + 4.5rem * 6);
   }
 }
+
+@media all and (max-width: 450px) {
+  .project {
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content min-content 1fr 1fr 30%;
+    grid-template-areas:
+      "name "
+      "link-container"
+      "description"
+      "stack"
+      "logo";
+    gap: 1.25rem; /*20px*/
+    justify-items: center;
+    text-align: center;
+  }
+
+  .project__name {
+    margin: 1.25rem 0 0 0;
+  }
+
+  .project__link {
+    border-radius: 0.5rem;
+    height: 2rem;
+    margin: 0;
+  }
+
+  .project__description {
+    margin: 0 1.25rem;
+  }
+
+  .project__stack {
+    margin: 0 1.25rem;
+    justify-content: center;
+  }
+
+  .project__logo {
+    width: 100%;
+    border-radius: 1.5rem 1.5rem 0 0;
+    box-shadow: 0px -0.5rem 0.5rem -0.25rem rgba(0, 0, 0, 0.4);
+  }
+}

@@ -31,3 +31,36 @@
   max-width: 46.875rem; /*750px*/
   box-sizing: border-box;
 }
+
+@media all and (max-width: 800px) {
+  .projects__item {
+    /* max-height: 20rem; */
+    max-width: 36.875rem;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .projects__item {
+    /* max-height: 22rem; */
+    max-width: 30.875rem;
+  }
+}
+
+@media all and (max-width: 450px) {
+  .projects {
+    padding: 1.75rem 0 7.871rem; /*60px*/
+  }
+
+  .projects__title {
+    margin-bottom: 1.75rem; /*60px*/
+  }
+
+  .projects__list {
+    gap: 1.75rem; /*60px*/
+  }
+
+  .projects__item {
+    max-height: 30rem;
+    max-width: 26.875rem;
+  }
+}

@@ -97,7 +97,7 @@ export const skills = [
     size: "small",
   },
   {
-    name: "Framer Motion",
+    name: "Framer",
     size: "small",
   },
 ] as const;

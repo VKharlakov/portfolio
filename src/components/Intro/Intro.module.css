@@ -103,3 +103,31 @@
     background-position-x: calc(100% + 10rem * 6);
   }
 }
+
+@media all and (max-width: 800px) {
+  .intro__container {
+    grid-template-areas:
+      "photo"
+      "info"
+      "scroll";
+    grid-template-columns: 1fr;
+    grid-template-rows: 22.75rem 1fr min-content;
+    justify-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .intro__info {
+    margin-top: 0;
+    max-width: none;
+  }
+  .intro__buttons {
+    justify-content: center;
+  }
+}
+
+@media all and (max-width: 450px) {
+  .intro {
+    padding: 1.75rem; /*60px*/
+  }
+}

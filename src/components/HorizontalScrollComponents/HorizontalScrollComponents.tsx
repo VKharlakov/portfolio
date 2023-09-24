@@ -9,7 +9,7 @@ function HorizontalScrollComponents() {
   const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({ target: targetRef });
   const skillsX = useTransform(scrollYProgress, [0, 0.7], ["0%", "-100%"]);
-  const introX = useTransform(scrollYProgress, [0.3, 1], ["0%", "-100%"]);
+  const introX = useTransform(scrollYProgress, [0.1, 0.7], ["0%", "-100%"]);
   const skillsOpacity = useTransform(scrollYProgress, [0, 0.5], ["0", "1"]);
   const imgScale = useTransform(scrollYProgress, [0, 0.01], [1, 0]);
 
