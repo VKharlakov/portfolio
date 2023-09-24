@@ -1,11 +1,20 @@
 import Head from "next/head";
-import Contacts from "@/components/Contacts/Contacts";
+
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 import Projects from "@/components/Projects/Projects";
 import HorizontalScrollComponents from "@/components/HorizontalScrollComponents/HorizontalScrollComponents";
-import Navbar from "@/components/Navbar/Navbar";
 import CurrentSectionContextProvider from "@/contexts/CurrentSectionContext";
 
+import { useEffect } from "react";
+
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant",
+    });
+  }, []);
   return (
     <>
       <Head>
@@ -13,10 +22,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <CurrentSectionContextProvider>
-        <Navbar />
+        <Header />
         <HorizontalScrollComponents />
         <Projects />
-        <Contacts />
+        <Footer />
       </CurrentSectionContextProvider>
     </>
   );

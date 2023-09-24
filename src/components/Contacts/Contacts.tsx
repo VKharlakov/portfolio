@@ -8,16 +8,18 @@ function Contacts() {
 
   return (
     <section className={styles.contacts} id="contacts" ref={ref}>
-      <h2 className={styles.contacts__title}>Contacts</h2>
+      {/* <h2 className={styles.contacts__title}>Contacts</h2> */}
       <ul className={styles.contacts__list}>
-        <li
-          className={`${styles.contacts__contact} ${styles["contacts__contact_type_main"]}`}
+        {/* <li
+          className={`${styles.contacts__contact} ${styles.contacts__contact_type_main}`}
         >
           <button className={styles.contacts__button} />
-        </li>
+        </li> */}
         {links.map((link, index) => (
           <li
-            className={`${styles.contacts__contact} ${styles["contacts__contact_type_small"]}`}
+            className={`${styles.contacts__contact} ${
+              styles[`contacts__contact_type_${link.name}`]
+            }`}
             key={index}
           >
             <a

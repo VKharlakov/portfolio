@@ -20,7 +20,6 @@ interface IntroProps {
 
 function Intro({ scrollData }: IntroProps) {
   const { ref } = useScrollSection("Home");
-  const { setCurrentSection } = useCurrentSectionContext();
 
   const [isClient, setIsClient] = useState(false);
   const [isAtTop, setIsAtTop] = useState(true);
@@ -28,12 +27,6 @@ function Intro({ scrollData }: IntroProps) {
   const checkScrollPosition = () => {
     setIsAtTop(window.scrollY < 100);
   };
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "instant",
-    });
-  }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", checkScrollPosition);
@@ -139,7 +132,6 @@ function Intro({ scrollData }: IntroProps) {
           )}
         </AnimatePresence>
         <motion.p
-          style={{ x: scrollData.x }}
           className={styles.intro__scroll}
           variants={introAppearAnimationVariants}
           initial="initial"

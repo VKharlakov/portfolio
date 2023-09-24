@@ -1,45 +1,40 @@
 .contacts {
-  height: 100vh;
-  padding: 60px;
+  padding: 3.75rem; /*60px*/
   box-sizing: border-box;
   color: var(--text-color);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 80px;
 }
 
 .contacts__title {
   font-size: var(--h2-size);
+  margin-bottom: 3.75rem; /*60px*/
 }
 
 .contacts__list {
   padding: 0;
-  margin: 0;
+  margin: auto;
   list-style: none;
   display: grid;
   justify-items: center;
   align-items: center;
-  gap: 16px;
-  grid-template-areas:
-    "... ... ... ... ..."
-    "... ... ... ... ..."
-    "... ... ... ... ..."
-    "... ... main ... ..."
-    "... ... ... ... ..."
-    "... ... ... ... ..."
-    "... ... ... ... ...";
+  gap: 2rem;
+  /* grid-template-areas:
+    " ... hh ... "
+    " whatsapp main telegram "
+    " ... linkedin ... "; */
+  grid-template-areas: " hh telegram linkedin whatsapp";
 }
 
 .contacts__contact {
-  height: 64px;
-  width: 64px;
+  height: 4rem; /*64px*/
+  width: 4rem; /*64px*/
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background-color: var(--secondary-color);
-  background-size: 70%;
+  background-size: 2.5rem; /*40px*/
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;
@@ -54,30 +49,26 @@
 
 .contacts__contact_type_main {
   grid-area: main;
-  width: 128px;
-  height: 128px;
+  width: 8rem; /*128px*/
+  height: 8rem; /*128px*/
 
   background-image: url("../../../public/email-icon.svg");
 }
 
-.contacts__contact_type_small:nth-of-type(2) {
-  grid-column: 3/4;
-  grid-row: 3/4;
+.contacts__contact_type_hh {
+  grid-area: hh;
   background-image: url("../../../public/hh-icon.svg");
 }
-.contacts__contact_type_small:nth-of-type(3) {
-  grid-column: 4/5;
-  grid-row: 4/5;
+.contacts__contact_type_linkedin {
+  grid-area: linkedin;
   background-image: url("../../../public/linkedin-icon.svg");
 }
-.contacts__contact_type_small:nth-of-type(4) {
-  grid-column: 3/4;
-  grid-row: 5/6;
+.contacts__contact_type_telegram {
+  grid-area: telegram;
   background-image: url("../../../public/tg-icon.svg");
 }
-.contacts__contact_type_small:nth-of-type(5) {
-  grid-column: 2/3;
-  grid-row: 4/5;
+.contacts__contact_type_whatsapp {
+  grid-area: whatsapp;
   background-image: url("../../../public/whatsapp-icon.svg");
 }
 

@@ -5,12 +5,12 @@ import { projects } from "../../../lib/data";
 import { useScrollSection } from "../../../lib/hooks";
 
 function Projects() {
-  const { ref } = useScrollSection("Projects", 0.2);
+  const { ref } = useScrollSection("Projects", 0.5);
 
   return (
-    <section className={styles.projects} id="projects" ref={ref}>
+    <section className={styles.projects} id="projects">
       <h2 className={styles.projects__title}>Projects</h2>
-      <ul className={styles.projects__list}>
+      <ul className={styles.projects__list} ref={ref}>
         {projects.map((project, index) => (
           <li className={styles.projects__item} key={index}>
             <Project projectData={project} />
