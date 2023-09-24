@@ -8,7 +8,6 @@
   align-items: center;
   gap: 60px;
   color: white;
-  scroll-margin-top: 40px;
   background-color: var(--secondary-color);
 }
 

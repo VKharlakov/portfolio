@@ -41,11 +41,13 @@
   grid-row: span 2;
   grid-column: span 2;
   font-size: var(--h2-size);
+  border-radius: 40px;
 }
 .skills__item_type_tall {
   grid-row: span 3;
   grid-column: span 1;
   font-size: var(--h2-size);
+  border-radius: 40px;
 }
 .skills__item_type_medium {
   grid-row: span 1;

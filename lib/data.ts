@@ -1,5 +1,6 @@
 import guildrmMockupSVG from "../public/guildrm__mockup-svg.svg";
 import googleBooksMockupSVG from "../public/googleBooks__mockup-svg.svg";
+import portfolioMockupSVG from "../public/portfolio__mockup-svg.svg";
 
 export const navLinks = [
   {
@@ -124,7 +125,7 @@ export const projects = [
     name: "Portfolio",
     stack: ["Frontend", "TypeScript", "Next.js", "Framer Motion", "BEM"],
     description: `A personal web page showcasing my skills and finished projects`,
-    icon: null,
+    icon: portfolioMockupSVG,
     link: undefined,
     repoLink: "https://github.com/VKharlakov/porftolio",
   },
