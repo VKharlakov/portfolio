@@ -46,7 +46,7 @@
 
 .intro__greeting {
   font-size: var(--h1-size);
-  font-family: var(--MPCL);
+  font-family: var(--MPCL), var(--Tektur);
   margin-bottom: 1.5rem; /*24px*/
 }
 
@@ -60,6 +60,8 @@
 }
 
 .intro__button {
+  text-decoration: none;
+  display: block;
   margin: 0;
   margin-top: 4rem; /*64px*/
   padding: 0.75rem 1.5rem; /*12px 24px*/
@@ -90,7 +92,7 @@
 .intro__scroll {
   grid-area: scroll;
   align-self: flex-end;
-  font-family: var(--MPCL);
+  font-family: var(--MPCL), var(--Tektur);
   font-size: calc(var(--p-size) - 2px);
   color: var(--text-color);
 }

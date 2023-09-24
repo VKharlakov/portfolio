@@ -21,8 +21,6 @@ export function useScrollSection(sectionName: SectionName, threshold = 0.6) {
 
   useEffect(() => {
     if (inView && Date.now() - whenLastClick > 1000) {
-      console.log(`${sectionName} section is in view`);
-      console.log(Date.now() - whenLastClick);
       setCurrentSection(sectionName);
     }
   }, [inView, sectionName]);

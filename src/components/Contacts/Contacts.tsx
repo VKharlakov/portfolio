@@ -19,7 +19,7 @@ const fadeInAnimationVariantsVertical = {
 };
 
 function Contacts() {
-  const { ref } = useScrollSection("Contacts");
+  const { ref } = useScrollSection("Контакты");
 
   return (
     <section className={styles.contacts} id="contacts" ref={ref}>
@@ -30,7 +30,7 @@ function Contacts() {
         transition={{ type: "spring" }}
         viewport={{ once: true }}
       >
-        Let's connect!
+        Будем на связи!
       </motion.h2>
       <ul className={styles.contacts__list}>
         {/* <li

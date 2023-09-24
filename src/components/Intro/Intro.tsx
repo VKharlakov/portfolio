@@ -19,7 +19,7 @@ interface IntroProps {
 }
 
 function Intro({ scrollData }: IntroProps) {
-  const { ref } = useScrollSection("Home");
+  const { ref } = useScrollSection("Главная");
 
   const [isClient, setIsClient] = useState(false);
   const [isAtTop, setIsAtTop] = useState(true);
@@ -41,16 +41,17 @@ function Intro({ scrollData }: IntroProps) {
 
   const introAppearAnimationVariants = {
     initial: {
-      x: "-50px",
+      y: 100,
       opacity: 0,
     },
-    animate: {
-      x: 0,
+    animate: (index: number) => ({
+      y: 0,
       opacity: 1,
       transition: {
         type: "spring",
+        delay: 0.1 * index,
       },
-    },
+    }),
   };
 
   return (
@@ -67,38 +68,38 @@ function Intro({ scrollData }: IntroProps) {
             variants={introAppearAnimationVariants}
             initial="initial"
             animate="animate"
+            custom={1}
           >
-            Hi, <br />I am Vitaly
+            Привет, <br />я - Виталий!
           </motion.h1>
           <motion.p
             className={styles.intro__brief}
             variants={introAppearAnimationVariants}
             initial="initial"
             animate="animate"
+            custom={2}
           >
-            I graduated from a linguistic university in Moscow, then moved to
-            Belgrade, Serbia, and started to study web development in
-            JavaScript. I successfully completed my studies and got my diploma,
-            and at the moment I am looking for a project where I can apply my
-            acquired skills and knowledge. My focus is React, mainly.
+            Закончил лингвистический университет в Москве, затем переехал в
+            Сербию, Белград и взялся за изучение Веб-разработки на JavaScript.
+            Обучение успешно завершил, получил диплом, и на данный момент ищу
+            проект, где смогу применить приобретенные навыки и знания. Уделяю
+            особое внимание проектам на React.
           </motion.p>
           <motion.div
             className={styles.intro__buttons}
             variants={introAppearAnimationVariants}
             initial="initial"
             animate="animate"
+            custom={3}
           >
-            <motion.div
-              className={styles["intro__button-container"]}
-              variants={introAppearAnimationVariants}
-              initial="initial"
-              animate="animate"
-            >
-              <button
+            <motion.div className={styles["intro__button-container"]}>
+              <a
                 className={styles.intro__button}
-              >{`Download CV (ru)`}</button>
+                href="/Kharlakov_Vitaly_CV_rus.pdf"
+                download
+              >{`Скачать резюме`}</a>
             </motion.div>
-            <motion.div
+            {/* <motion.div
               className={styles["intro__button-container"]}
               variants={introAppearAnimationVariants}
               initial="initial"
@@ -107,23 +108,20 @@ function Intro({ scrollData }: IntroProps) {
               <button
                 className={styles.intro__button}
               >{`Download CV (eng)`}</button>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </div>
         <AnimatePresence>
           {isClient && isAtTop && (
             <motion.div
               className={styles["intro__photo-container"]}
-              initial={{ opacity: 0, scale: 0.7 }}
+              initial={{ opacity: 0, scale: 0.4 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0 }}
               transition={{
-                duration: 0.2,
                 ease: [0, 0.71, 0.2, 1],
                 scale: {
                   type: "spring",
-                  damping: 10,
-                  stiffness: 200,
                 },
               }}
             >
@@ -136,8 +134,9 @@ function Intro({ scrollData }: IntroProps) {
           variants={introAppearAnimationVariants}
           initial="initial"
           animate="animate"
+          custom={4}
         >
-          Scroll down to see more
+          Начни скроллить вниз, чтобы увидеть больше
         </motion.p>
       </div>
     </motion.section>

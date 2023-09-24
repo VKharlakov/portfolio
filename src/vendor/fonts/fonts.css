@@ -27,6 +27,28 @@
   font-weight: 300;
   font-style: normal;
 }
+/* Tektur */
+
+@font-face {
+  font-family: "Tektur";
+  src: url("./Tektur/Tektur-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Tektur";
+  src: url("./Tektur/Tektur-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Tektur";
+  src: url("./Tektur/Tektur-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
 
 /* Inter */
 

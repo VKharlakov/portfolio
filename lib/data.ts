@@ -4,24 +4,24 @@ import portfolioMockupSVG from "../public/portfolio__mockup-svg.svg";
 
 export const navLinks = [
   {
-    name: "Home",
+    name: "Главная",
     hash: "#home",
     scrollMethod: "manual",
     scrollToMultiplier: 0,
   },
   {
-    name: "Skills",
+    name: "Навыки",
     hash: "#skills",
     scrollMethod: "manual",
     scrollToMultiplier: 1,
   },
   {
-    name: "Projects",
+    name: "Проекты",
     hash: "#projects",
     scrollMethod: "auto",
   },
   {
-    name: "Contacts",
+    name: "Контакты",
     hash: "#contacts",
     scrollMethod: "auto",
   },
@@ -116,15 +116,15 @@ export const projects = [
       "Nginx",
       "MongoDB",
     ],
-    description: `A small web application made for a World of Warcraft gaming community. It allows to track guild's groups composition for easier roster monitoring.`,
+    description: `Небольшое веб-приложение, созданное для геймерского сообщества World of Warcraft. Оно позволяет отслеживать состав гильдии для удобного контроля над списком игроков.`,
     icon: guildrmMockupSVG,
     link: "https://guildrm.com",
     repoLink: "https://github.com/VKharlakov/guild-roster-manager",
   },
   {
-    name: "Portfolio",
+    name: "Сайт-портфолио",
     stack: ["Frontend", "TypeScript", "Next.js", "Framer Motion", "BEM"],
-    description: `A personal web page showcasing my skills and finished projects.`,
+    description: `Мой веб-сайт портфолио, представляющий мои профессиональные навыки и готовые проекты.`,
     icon: portfolioMockupSVG,
     link: undefined,
     repoLink: "https://github.com/VKharlakov/porftolio",
@@ -132,7 +132,7 @@ export const projects = [
   {
     name: "Google Books API Catalog",
     stack: ["Frontend", "TypeScript", "React", "Redux", "Docker", "BEM"],
-    description: `This project is an interactive book catalog based on data obtained using the Google Books API.`,
+    description: `Этот проект представляет собой интерактивный каталог книг, основанный на данных, полученных с помощью API Google Books.`,
     icon: googleBooksMockupSVG,
     link: undefined,
     repoLink: "https://github.com/VKharlakov/future-junior",

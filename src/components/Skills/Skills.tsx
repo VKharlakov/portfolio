@@ -25,7 +25,7 @@ const fadeInAnimationVariants = {
 };
 
 function Skills({ scrollData }: SkillsProps) {
-  const { ref } = useScrollSection("Skills");
+  const { ref } = useScrollSection("Навыки");
 
   return (
     <motion.section
