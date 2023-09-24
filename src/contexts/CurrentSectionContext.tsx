@@ -18,7 +18,7 @@ export const CurrentSectionContext =
 export default function CurrentSectionContextProvider({
   children,
 }: CurrentSectionContextProviderProps) {
-  const [currentSection, setCurrentSection] = useState<SectionName>("Home");
+  const [currentSection, setCurrentSection] = useState<SectionName>("Главная");
   const [whenLastClick, setWhenLastClick] = useState(0);
 
   return (
