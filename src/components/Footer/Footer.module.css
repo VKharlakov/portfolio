@@ -1,0 +1,11 @@
+.footer {
+  background-color: var(--secondary-color);
+  text-align: center;
+}
+
+.footer__signature {
+  font-size: calc(var(--p-size) - 2px);
+  color: var(--main-color);
+  padding-bottom: 1.125rem;
+  opacity: 0.3;
+}
