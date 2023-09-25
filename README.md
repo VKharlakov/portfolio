@@ -1,38 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+[На русском](#портфолио-русский)
 
-## Getting Started
+[English version](#portfolio-english)
 
-First, run the development server:
+## Портфолио (Русский)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Добро пожаловать в репозиторий моего портфолио! Этот проект создан с целью представить мои разнообразные проекты, навыки и контактные данные в удобной и информативной форме.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ссфлка на страницу: [vkharlakov.ru](https://vkharlakov.ru/)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### Основные разделы сайта:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- **Навыки и компетенции:** Помимо описания проектов, вы также сможете ознакомиться с моими навыками и компетенциями. Это поможет вам понять, какие задачи я могу успешно выполнять.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- **Портфолио проектов:** На сайте вы найдете краткую информацию о различных проектах, над которыми я работал. Каждый проект сопровождается описанием, изображениями и ссылками на репозитории, если доступны.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Связь и социальные сети:** Чтобы связаться со мной или узнать больше о моей работе, вы найдете информацию о моих профилях в социальных сетях и мессенджерах. Буду рад сотрудничеству.
 
-## Learn More
+### Стек:
 
-To learn more about Next.js, take a look at the following resources:
+- HTML
+- CSS
+- Figma
+- Next.js
+- TypeScript
+- Framer Motion
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Portfolio (English)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Welcome to repository of my portfolio page! This project is created with the aim of presenting my diverse projects, skills, and contact information in a convenient and informative format.
 
-## Deploy on Vercel
+Link to the website: [vkharlakov.ru](https://vkharlakov.ru/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Key Sections of the Website:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Skills and Competencies:** In addition to project descriptions, you can also explore my skills and competencies. This will help you understand the tasks I can successfully handle.
+
+- **Project Portfolio:** On the website, you will find brief information about various projects I have worked on. Each project is accompanied by a description, images, and links to repositories if available.
+
+- **Contact and Social Media:** To get in touch with me or learn more about my work, you will find information about my profiles on social media and messaging platforms. I am open to collaboration.
+
+### Stack:
+
+- HTML
+- CSS
+- Figma
+- Next.js
+- TypeScript
+- Framer Motion
