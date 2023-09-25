@@ -31,7 +31,7 @@ Welcome to repository of my portfolio page! This project is created with the aim
 
 Link to the website: [vkharlakov.ru](https://vkharlakov.ru/)
 
-## Key Sections of the Website:
+### Key Sections of the Website:
 
 - **Skills and Competencies:** In addition to project descriptions, you can also explore my skills and competencies. This will help you understand the tasks I can successfully handle.
 
