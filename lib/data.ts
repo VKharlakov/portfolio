@@ -127,7 +127,7 @@ export const projects = [
     description: `Мой веб-сайт портфолио, представляющий мои профессиональные навыки и готовые проекты.`,
     icon: portfolioMockupSVG,
     link: undefined,
-    repoLink: "https://github.com/VKharlakov/porftolio",
+    repoLink: "https://github.com/VKharlakov/portfolio",
   },
   {
     name: "Google Books API Catalog",
