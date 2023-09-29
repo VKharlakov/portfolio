@@ -19,7 +19,7 @@ const fadeInAnimationVariantsVertical = {
 };
 
 function Contacts() {
-  const { ref } = useScrollSection("Контакты");
+  const { ref } = useScrollSection("#contacts");
 
   return (
     <section className={styles.contacts} id="contacts" ref={ref}>

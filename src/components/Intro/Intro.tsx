@@ -1,15 +1,10 @@
 import styles from "./Intro.module.css";
 import photo from "../../../public/photo.jpg";
 
-import {
-  AnimatePresence,
-  motion,
-  MotionValue,
-  useScroll,
-  useTransform,
-} from "framer-motion";
-import { useCurrentSectionContext, useScrollSection } from "../../../lib/hooks";
-import { useRef, useEffect, useState } from "react";
+import { AnimatePresence, motion, MotionValue } from "framer-motion";
+import { useScrollSection, useUserLanguageContext } from "../../../lib/hooks";
+import { useEffect, useState } from "react";
+import { useTranslation } from "next-i18next";
 
 interface IntroProps {
   scrollData: {
@@ -19,7 +14,9 @@ interface IntroProps {
 }
 
 function Intro({ scrollData }: IntroProps) {
-  const { ref } = useScrollSection("Главная");
+  const { ref } = useScrollSection("#home");
+  const { t } = useTranslation("intro");
+  const userLanguage = useUserLanguageContext();
 
   const [isClient, setIsClient] = useState(false);
   const [isAtTop, setIsAtTop] = useState(true);
@@ -92,23 +89,32 @@ function Intro({ scrollData }: IntroProps) {
             animate="animate"
             custom={3}
           >
-            <motion.div className={styles["intro__button-container"]}>
-              <a
-                className={styles.intro__button}
-                href="/Kharlakov_Vitaly_CV_rus.pdf"
-                download
-              >{`Скачать резюме`}</a>
-            </motion.div>
-            {/* <motion.div
-              className={styles["intro__button-container"]}
-              variants={introAppearAnimationVariants}
-              initial="initial"
-              animate="animate"
-            >
-              <button
-                className={styles.intro__button}
-              >{`Download CV (eng)`}</button>
-            </motion.div> */}
+            {userLanguage === "ru" ? (
+              <motion.div className={styles["intro__button-container"]}>
+                <a
+                  className={styles.intro__button}
+                  href="/Kharlakov_Vitaly_CV_rus.pdf"
+                  download
+                >
+                  Скачать резюме
+                </a>
+              </motion.div>
+            ) : (
+              <motion.div
+                className={styles["intro__button-container"]}
+                variants={introAppearAnimationVariants}
+                initial="initial"
+                animate="animate"
+              >
+                <a
+                  className={styles.intro__button}
+                  href="/Kharlakov_Vitaly_CV_eng.pdf"
+                  download
+                >
+                  Download CV
+                </a>
+              </motion.div>
+            )}
           </motion.div>
         </div>
         <AnimatePresence>

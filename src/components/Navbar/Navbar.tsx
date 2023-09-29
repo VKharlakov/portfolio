@@ -4,15 +4,21 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { navLinks } from "../../../lib/data";
 import type { NavLink } from "../../../lib/types";
-import { useCurrentSectionContext } from "../../../lib/hooks";
+import {
+  useCurrentSectionContext,
+  useUserLanguageContext,
+} from "../../../lib/hooks";
 
 function Navbar() {
   const { currentSection, setCurrentSection, setWhenLastClick } =
     useCurrentSectionContext();
+  const userLanguage = useUserLanguageContext();
+  console.log(userLanguage);
 
   function scrollToSection(link: NavLink) {
     const element = document.getElementById(`${link.hash.slice(1)}`);
-    setCurrentSection(link.name);
+    setCurrentSection(link.hash);
+
     setWhenLastClick(Date.now());
     if (!element) {
       return;
@@ -46,15 +52,15 @@ function Navbar() {
                 scrollToSection(link);
               }}
               className={`${styles.navbar__link} ${
-                currentSection === link.name
+                currentSection === link.hash
                   ? `${styles.navbar__link_active}`
                   : ""
               }`}
               href={link.hash}
             >
-              {link.name}
+              {userLanguage === "ru" ? `${link.nameRu}` : `${link.nameEng}`}
             </Link>
-            {currentSection === link.name && (
+            {currentSection === link.hash && (
               <motion.span
                 layoutId="currentSection"
                 transition={{

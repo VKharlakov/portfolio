@@ -1,5 +1,9 @@
 import { createContext, useState } from "react";
-import type { SectionName } from "../../lib/types";
+import type {
+  SectionNameRu,
+  SectionNameEng,
+  SectionHash,
+} from "../../lib/types";
 
 interface CurrentSectionContextProviderProps {
   children: React.ReactNode;
@@ -7,9 +11,9 @@ interface CurrentSectionContextProviderProps {
 
 interface CurrentSectionContextType {
   whenLastClick: number;
-  currentSection: SectionName;
+  currentSection: SectionHash;
   setWhenLastClick: React.Dispatch<React.SetStateAction<number>>;
-  setCurrentSection: React.Dispatch<React.SetStateAction<SectionName>>;
+  setCurrentSection: React.Dispatch<React.SetStateAction<SectionHash>>;
 }
 
 export const CurrentSectionContext =
@@ -18,7 +22,7 @@ export const CurrentSectionContext =
 export default function CurrentSectionContextProvider({
   children,
 }: CurrentSectionContextProviderProps) {
-  const [currentSection, setCurrentSection] = useState<SectionName>("Главная");
+  const [currentSection, setCurrentSection] = useState<SectionHash>("#home");
   const [whenLastClick, setWhenLastClick] = useState(0);
 
   return (

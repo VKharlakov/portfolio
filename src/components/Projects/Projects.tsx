@@ -5,7 +5,7 @@ import { projects } from "../../../lib/data";
 import { useScrollSection } from "../../../lib/hooks";
 
 function Projects() {
-  const { ref } = useScrollSection("Проекты", 0.5);
+  const { ref } = useScrollSection("#projects", 0.5);
 
   return (
     <section className={styles.projects} id="projects">

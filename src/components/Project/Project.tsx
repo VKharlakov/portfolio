@@ -2,11 +2,13 @@ import { projects } from "../../../lib/data";
 import styles from "./Project.module.css";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useUserLanguageContext } from "../../../lib/hooks";
 interface ProjectProps {
   projectData: (typeof projects)[number];
 }
 
 function Project({ projectData }: ProjectProps) {
+  const userLanguage = useUserLanguageContext();
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -23,7 +25,11 @@ function Project({ projectData }: ProjectProps) {
     >
       <section className={styles.project}>
         <h3 className={styles.project__name}>{projectData.name}</h3>
-        <p className={styles.project__description}>{projectData.description}</p>
+        <p className={styles.project__description}>
+          {userLanguage === "ru"
+            ? `${projectData.descriptionRu}`
+            : `${projectData.descriptionEng}`}
+        </p>
         <ul className={styles.project__stack}>
           {projectData.stack.map((item, index) => (
             <li className={styles[`project__stack-item`]} key={index}>

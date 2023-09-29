@@ -7,6 +7,7 @@ import HorizontalScrollComponents from "@/components/HorizontalScrollComponents/
 import CurrentSectionContextProvider from "@/contexts/CurrentSectionContext";
 
 import { useEffect } from "react";
+import UserLanguageContextProvider from "@/contexts/UserLanguageContext";
 
 export default function Home() {
   useEffect(() => {
@@ -22,10 +23,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <CurrentSectionContextProvider>
-        <Header />
-        <HorizontalScrollComponents />
-        <Projects />
-        <Footer />
+        <UserLanguageContextProvider>
+          <Header />
+          <HorizontalScrollComponents />
+          <Projects />
+          <Footer />
+        </UserLanguageContextProvider>
       </CurrentSectionContextProvider>
     </>
   );

@@ -1,0 +1,14 @@
+{
+  "intro": {
+    "greeting-p1": "Hi",
+    "greeting-p2": "I'm Vitaly",
+    "brief": "I graduated from a linguistic university in Moscow, then moved to Serbia, Belgrade, and started studying web development with JavaScript. I successfully completed my education, received a diploma, and currently, I'm looking for a project where I can apply my acquired skills and knowledge. I pay special attention to React projects.",
+    "scroll": "Scroll down to see more"
+  },
+  "projects": {
+    "title": "My projects:"
+  },
+  "contacts": {
+    "title": "Let's connect!"
+  }
+}
