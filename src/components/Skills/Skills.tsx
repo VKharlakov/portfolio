@@ -41,7 +41,6 @@ function Skills({ scrollData }: SkillsProps) {
             className={`${styles.skills__item} ${
               styles[`skills__item_type_${skill.size}`]
             }`}
-            // framer-motion settings
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"

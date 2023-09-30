@@ -2,7 +2,7 @@ import styles from "./Contacts.module.css";
 
 import { links } from "../../../lib/data";
 import { motion } from "framer-motion";
-import { useScrollSection } from "../../../lib/hooks";
+import { useScrollSection, useTranslate } from "../../../lib/hooks";
 
 const fadeInAnimationVariantsVertical = {
   initial: {
@@ -30,14 +30,9 @@ function Contacts() {
         transition={{ type: "spring" }}
         viewport={{ once: true }}
       >
-        Будем на связи!
+        {useTranslate("contacts.title")}
       </motion.h2>
       <ul className={styles.contacts__list}>
-        {/* <li
-          className={`${styles.contacts__contact} ${styles.contacts__contact_type_main}`}
-        >
-          <button className={styles.contacts__button} />
-        </li> */}
         {links.map((link, index) => (
           <motion.div
             key={index}

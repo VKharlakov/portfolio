@@ -1,9 +1,11 @@
-import type { SectionNameRu, SectionNameEng, SectionHash } from "./types";
+import type { SectionHash } from "./types";
 import { useContext, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import { CurrentSectionContext } from "@/contexts/CurrentSectionContext";
+import { translations } from "./translations/translations";
 import { UserLanguageContext } from "@/contexts/UserLanguageContext";
+import { CurrentSectionContext } from "@/contexts/CurrentSectionContext";
 
+// check if context for CurrentSection Context is "null"
 export function useCurrentSectionContext() {
   const context = useContext(CurrentSectionContext);
 
@@ -16,6 +18,7 @@ export function useCurrentSectionContext() {
   return context;
 }
 
+// scroll to section
 export function useScrollSection(sectionHash: SectionHash, threshold = 0.6) {
   const { ref, inView } = useInView({ threshold });
   const { setCurrentSection, whenLastClick } = useCurrentSectionContext();
@@ -29,6 +32,7 @@ export function useScrollSection(sectionHash: SectionHash, threshold = 0.6) {
   return { ref };
 }
 
+// check if context for UserLanguageContext is "null"
 export function useUserLanguageContext() {
   const context = useContext(UserLanguageContext);
 
@@ -39,4 +43,24 @@ export function useUserLanguageContext() {
   }
 
   return context;
+}
+
+// return translated string
+export function useTranslate(key: string) {
+  const userLanguage = useUserLanguageContext();
+
+  const keys = key.split(".");
+
+  let translation: any;
+
+  if (userLanguage === "ru") {
+    translation = translations.ru;
+  } else {
+    translation = translations.en;
+  }
+  for (const subKey of keys) {
+    translation = translation[subKey];
+  }
+
+  return translation;
 }

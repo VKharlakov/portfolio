@@ -1,6 +1,7 @@
-import { projects } from "../../../lib/data";
 import styles from "./Project.module.css";
+
 import { useRef } from "react";
+import { projects } from "../../../lib/data";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useUserLanguageContext } from "../../../lib/hooks";
 interface ProjectProps {

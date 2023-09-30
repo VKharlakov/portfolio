@@ -1,6 +1,6 @@
 import guildrmMockupSVG from "../public/guildrm__mockup-svg.svg";
 import googleBooksMockupSVG from "../public/googleBooks__mockup-svg.svg";
-import portfolioMockupSVG from "../public/portfolio__mockup-svg.svg";
+import diplomaMockupSVG from "../public/diploma__mockup-svg.svg";
 
 export const navLinks = [
   {
@@ -142,9 +142,9 @@ export const projects = [
     ],
     descriptionRu: `Дипломный проект, представляющий собой страницу "О себе" с проектной информацией и возможность создать и войти в свой аккаунт с сотней фильмов, которые можно сохранить в избранное.`,
     descriptionEng: `A diploma project consisting of a 'About Me' page with project-related information and the ability to create and log into your account with a collection of a hundred movies that can be saved as favorites.`,
-    icon: portfolioMockupSVG,
+    icon: diplomaMockupSVG,
     link: undefined,
-    repoLink: "https://github.com/VKharlakov/portfolio",
+    repoLink: "https://github.com/VKharlakov/movies-explorer-frontend",
   },
   {
     name: "Google Books API Catalog",

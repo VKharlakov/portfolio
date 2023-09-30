@@ -3,11 +3,11 @@ import Head from "next/head";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import Projects from "@/components/Projects/Projects";
-import HorizontalScrollComponents from "@/components/HorizontalScrollComponents/HorizontalScrollComponents";
+import UserLanguageContextProvider from "@/contexts/UserLanguageContext";
 import CurrentSectionContextProvider from "@/contexts/CurrentSectionContext";
+import HorizontalScrollComponents from "@/components/HorizontalScrollComponents/HorizontalScrollComponents";
 
 import { useEffect } from "react";
-import UserLanguageContextProvider from "@/contexts/UserLanguageContext";
 
 export default function Home() {
   useEffect(() => {

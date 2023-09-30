@@ -1,10 +1,10 @@
 import styles from "./Intro.module.css";
 import photo from "../../../public/photo.jpg";
 
+import { useEffect, useState } from "react";
+import { useTranslate } from "../../../lib/hooks";
 import { AnimatePresence, motion, MotionValue } from "framer-motion";
 import { useScrollSection, useUserLanguageContext } from "../../../lib/hooks";
-import { useEffect, useState } from "react";
-import { useTranslation } from "next-i18next";
 
 interface IntroProps {
   scrollData: {
@@ -15,7 +15,6 @@ interface IntroProps {
 
 function Intro({ scrollData }: IntroProps) {
   const { ref } = useScrollSection("#home");
-  const { t } = useTranslation("intro");
   const userLanguage = useUserLanguageContext();
 
   const [isClient, setIsClient] = useState(false);
@@ -67,7 +66,8 @@ function Intro({ scrollData }: IntroProps) {
             animate="animate"
             custom={1}
           >
-            Привет, <br />я - Виталий!
+            {useTranslate("intro.greeting_p1")}
+            <br /> {useTranslate("intro.greeting_p2")}
           </motion.h1>
           <motion.p
             className={styles.intro__brief}
@@ -76,11 +76,7 @@ function Intro({ scrollData }: IntroProps) {
             animate="animate"
             custom={2}
           >
-            Закончил лингвистический университет в Москве, затем переехал в
-            Сербию, Белград и взялся за изучение Веб-разработки на JavaScript.
-            Обучение успешно завершил, получил диплом, и на данный момент ищу
-            проект, где смогу применить приобретенные навыки и знания. Уделяю
-            особое внимание проектам на React.
+            {useTranslate("intro.brief")}
           </motion.p>
           <motion.div
             className={styles.intro__buttons}
@@ -142,7 +138,7 @@ function Intro({ scrollData }: IntroProps) {
           animate="animate"
           custom={4}
         >
-          Начни скроллить вниз, чтобы увидеть больше
+          {useTranslate("intro.scroll")}
         </motion.p>
       </div>
     </motion.section>
