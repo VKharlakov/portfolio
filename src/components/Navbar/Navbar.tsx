@@ -13,7 +13,6 @@ function Navbar() {
   const { currentSection, setCurrentSection, setWhenLastClick } =
     useCurrentSectionContext();
   const userLanguage = useUserLanguageContext();
-  console.log(userLanguage);
 
   function scrollToSection(link: NavLink) {
     const element = document.getElementById(`${link.hash.slice(1)}`);
